@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Bestie! 🎂💗</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3, #a18cd1);
+      min-height: 100vh;
+    }
+
+    main {
+      max-width: 850px;
+      margin: auto;
+      padding: 30px 16px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 7vw, 44px);
+    }
+
+    h2 {
+      font-size: clamp(24px, 6vw, 34px);
+      margin-top: 35px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    .cake {
+      font-size: 100px;
+      animation: bounce 1.5s infinite;
+    }
+
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 15px 24px;
+      background: white;
+      color: #d63384;
+      font-size: 18px;
+      margin: 14px 0;
+      cursor: pointer;
+    }
+
+    #surprise {
+      display: none;
+      padding: 10px;
+      animation: fadeIn 1s ease;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .gallery img {
+      width: 44%;
+      max-width: 270px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 5px 15px #7a205544;
+    }
+
+    .confetti {
+      font-size: 28px;
+      margin: 15px 0;
+    }
+
+    footer {
+      padding: 30px 10px;
+      font-size: 17px;
+    }
+
+    @keyframes bounce {
+      50% {
+        transform: translateY(-12px) rotate(3deg);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .gallery img {
+        height: 230px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="confetti" id="confetti">🎉 ✨ 🎊 💗 🎉</div>
+
+    <h1>🎂 Happy Birthday, Bestie! 🎂</h1>
+
+    <div class="cake">🎂</div>
+
+    <p>Today is all about YOU! 💖</p>
+
+    <button onclick="celebrate()">Open Your Surprise 🎁</button>
+
+    <div id="surprise">
+      <h2>To My Amazing Best Friend ❤️</h2>
+
+      <p>
+        Wishing you endless happiness, success, laughter and beautiful
+        memories. Thank you for being such a special friend.
+        May all your dreams come true! Never stop smiling.
+        You deserve the best! 🥳💕
+      </p>
+
+      <div class="confetti">❤️ 💗 💖 💕 ❤️</div>
+    </div>
+
+    <h2>📸 Our Memories</h2>
+
+    <div class="gallery">
+      <img src="Snapchat-1557981233.jpg" alt="Memory 1">
+      <img src="Snapchat-1902686152.jpg" alt="Memory 2">
+      <img src="Snapchat-414212153.jpg" alt="Memory 3">
+    </div>
+
+    <div class="confetti">🎊 ✨ 🎉 ✨ 🎊</div>
+
+    <footer>
+      Made with ❤️ especially for you! 🎂
+    </footer>
+  </main>
+
+  <script>
+    function celebrate() {
+      document.getElementById("surprise").style.display = "block";
+
+      document.getElementById("confetti").textContent =
+        "🎉🎊✨💖🎉🎊✨💗🎉";
+
+      document.getElementById("surprise").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+  </script>
+</body>
+</html>
