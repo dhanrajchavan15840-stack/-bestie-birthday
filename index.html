@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Happy Birthday Addy 🩵</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;text-align:center;font-family:Arial,sans-serif;
+ color:#245477;background:linear-gradient(#8edcff,#eaf8ff,#fff);
+ overflow-x:hidden
+}
+header{padding:42px 14px 20px}
+h1{font-size:clamp(32px,8vw,46px);color:#1685bd}
+h2{color:#1685bd}
+p{line-height:1.8}
+section{padding:25px 14px}
+.card{
+ max-width:620px;margin:20px auto;padding:22px;
+ background:#ffffffdc;border-radius:22px;
+ box-shadow:0 5px 22px #1685bd20
+}
+.cloud{position:fixed;z-index:-1;font-size:55px;animation:drift 7s infinite alternate}
+.c1{top:8%;left:4%}.c2{top:38%;right:4%}
+@keyframes drift{to{transform:translateX(20px)}}
+.balloon{font-size:34px;display:inline-block;animation:float 1.5s infinite alternate}
+@keyframes float{to{transform:translateY(-12px) rotate(8deg)}}
+.cake{position:relative;width:210px;height:190px;margin:35px auto 10px;animation:bounce 1.5s infinite}
+@keyframes bounce{50%{transform:translateY(-7px)}}
+.plate{position:absolute;bottom:10px;left:5px;width:200px;height:16px;background:white;border-radius:50%;box-shadow:0 4px #8ecbea}
+.base{position:absolute;bottom:26px;left:25px;width:160px;height:65px;background:#ff9fc4;border-radius:9px 9px 16px 16px;border-bottom:7px solid #e977a5}
+.top{position:absolute;bottom:85px;left:40px;width:130px;height:35px;background:#fff0f7;border-radius:10px 10px 15px 15px}
+.candle{position:absolute;bottom:115px;left:98px;width:14px;height:42px;background:repeating-linear-gradient(45deg,#fff 0 6px,#70cfff 6px 12px);border-radius:3px;z-index:2}
+.flame{position:absolute;bottom:153px;left:95px;width:20px;height:27px;background:#ffb52e;border-radius:50% 50% 40% 40%;box-shadow:0 0 20px #ffd45c;transform-origin:bottom;animation:flicker .4s infinite alternate;z-index:3}
+@keyframes flicker{to{transform:rotate(8deg) scale(.85)}}
+button{border:0;border-radius:30px;background:#198fc7;color:white;padding:13px 22px;font-size:16px;font-weight:bold;margin:10px;cursor:pointer}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:650px;margin:20px auto}
+.gallery img{width:100%;height:210px;object-fit:cover;border:4px solid white;border-radius:16px}
+.gallery img:last-child:nth-child(odd){grid-column:1/-1;width:70%;justify-self:center}
+#letter{display:none;text-align:left;white-space:pre-line;line-height:1.9;margin-top:20px;background:#f5fbff;padding:20px;border-radius:16px;border:1px solid #c5eaff}
+#letter.show{display:block;animation:reveal .5s ease}
+@keyframes reveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+footer{padding:25px}
+@media(max-width:400px){.gallery img{height:165px}.card{padding:16px}}
+</style>
+</head>
+<body>
+<div class="cloud c1">☁️</div>
+<div class="cloud c2">☁️</div>
+
+<header>
+ <div class="balloon">🎈 🩵 🎈</div>
+ <h1>Happy Birthday, Addy! 🎂</h1>
+ <p>A little sky-blue world made just for you ✨</p>
+</header>
+
+<section>
+ <div class="card">
+  <h2>Your Birthday Cake 🎂</h2>
+  <div class="cake">
+   <div class="flame"></div>
+   <div class="candle"></div>
+   <div class="top"></div>
+   <div class="base"></div>
+   <div class="plate"></div>
+  </div>
+  <p>Make a wish, Addy! 🩵✨</p>
+  <button onclick="celebrate()">Celebrate! 🎉</button>
+  <p id="message" aria-live="polite"></p>
+ </div>
+</section>
+
+<section>
+ <h2>Our Beautiful Memories 📸</h2>
+ <p>Some little moments, some lovely memories 🩵</p>
+ <div class="gallery">
+  <img src="Screenshot_2026-10-28-15-14-49-23_a63b0f8076346d26cbdc1b971a1da2a7.jpg" alt="Memory 1">
+  <img src="Screenshot_2026-10-28-15-15-20-20_a63b0f8076346d26cbdc1b971a1da2a7.jpg" alt="Memory 2">
+  <img src="Screenshot_2026-10-28-15-16-47-01_a63b0f8076346d26cbdc1b971a1da2a7.jpg" alt="Memory 3">
+  <img src="Snapchat-1557981233.jpg" alt="Memory 4">
+  <img src="Snapchat-414212153.jpg" alt="Memory 5">
+ </div>
+</section>
+
+<section>
+ <div class="card">
+  <h2>A Little Message for You 💌</h2>
+  <p>Arey Addy, tuzyasathi kahi tari special aahe... 🩵</p>
+  <button id="letterButton" onclick="toggleLetter()">Open Your Letter 💌</button>
+
+  <div id="letter">
+Happiest Birthday, Addy! 🩵🎂🫶🏻
+
+Aree Addy, happiest birthday re! ❤️‍🩹✨
+
+Tula kay sangu he kharach kalat nahiye, pn aaj tuza special day aahe mhnun tuzyasathi kahi tari lihavasa vatla.
+
+Aplya madhye ek gosht mala nehmi special vatte, ti mhnje mi tula Addy mhnaycho ani tu mala Bachaa mhnaychis 😂😭❤️. Mahit nahi ka, pn he names athavle ki apli ti choti choti masti ani moments athavtat.
+
+Kadhi kadhi khup chotya goshti pan aplyasathi khup special astat, ani majhyasathi he pan tyatlech ek aahe. 🫶🏻
+
+Addy, tu nehmi happy raha, khup hasat raha ani tuzhi sagli dreams complete hou de. Tula life madhye khup success milo, tu je kahi tharavshil te achieve kar ani tuzya chehryavar chi smile asich kayam raha. 🩵✨
+
+Ani ho Bachaa kadun Addy sathi evdhich wish aahe ki tuza ha birthday khup special javo, tu khup enjoy karav ani tuzyasathi ha new year khup sari happiness gheun yavo. 🎂💗
+
+Kahi moments ani kahi nicknames ase astat je simple astat, pn tyanchya mage khup sari memories astat. Addy ani Bachaa he tyatlech ek! 😂🩵
+
+Once again, Happiest Birthday Addy! 🎂🫶🏻
+
+Nehmi happy raha re, ani swatachi kalji ghet ja. 💙✨
+
+— Tujha Bachaa 😂🩵
+  </div>
+ </div>
+</section>
+
+<footer>Made with 🩵, just for you ✨</footer>
+
+<script>
+function toggleLetter(){
+ const letter=document.getElementById("letter");
+ const button=document.getElementById("letterButton");
+ letter.classList.toggle("show");
+ button.textContent=letter.classList.contains("show")
+  ?"Close Your Letter 💌":"Open Your Letter 💌";
+}
+function celebrate(){
+ document.getElementById("message").textContent=
+ "Happy Birthday Addy! 🎉🩵 Make a beautiful wish!";
+ for(let i=0;i<30;i++){
+  const item=document.createElement("span");
+  item.textContent=["🎉","✨","💙","🎊","🩵"][i%5];
+  Object.assign(item.style,{
+   position:"fixed",left:Math.random()*100+"vw",top:"-30px",
+   fontSize:"25px",zIndex:"10",pointerEvents:"none",
+   transition:"transform 2.5s linear,opacity 2.5s linear"
+  });
+  document.body.appendChild(item);
+  requestAnimationFrame(()=>{
+   item.style.transform="translateY("+(innerHeight+60)+"px) rotate(500deg)";
+   item.style.opacity="0";
+  });
+  setTimeout(()=>item.remove(),2600);
+ }
+}
+</script>
+</body>
+</html>
